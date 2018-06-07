@@ -2,6 +2,6 @@
 Simple html examples of features or functionality
 ---
 ##### Report headers
-* [Without Labels](../report-headers-no-labels.html)
-* [With Labels](../report-headers.html)
-* [Custom Bootstrap Elements](../bootstrap-custom-elements.html)
+* [Without Labels](https://dandefenbaugh.github.io/html-bits/report-headers-no-labels.html)
+* [With Labels](https://dandefenbaugh.github.io/html-bits/report-headers.html)
+* [Custom Bootstrap Elements](https://dandefenbaugh.github.io/html-bits/bootstrap-custom-elements.html)
