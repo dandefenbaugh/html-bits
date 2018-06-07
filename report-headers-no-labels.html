@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Report Headers - No Labels</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Style -->
+    <style>
+		.report-title {
+			margin-top: 64px;
+		}
+		.report-header {
+			margin-top: 32px;
+			margin-bottom: 64px;
+		}
+		.revisit {
+			color: red;
+		}
+		h4 {
+			padding-bottom: 16px;
+		}
+	</style>
+	<!-- Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+	    <h1 class="report-title">Report Headers - No Labels</h1>
+		<!-- Aging Invoices -->
+        <div class="container report-header">
+            <h4>Aging Invoices</h4>
+            <form>
+                <div class="form-row">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputAIType1" placeholder="For Client...">
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputAIType2" placeholder="For Case...">
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formAIControlSelect3">
+                            <option>Sort by Days Overdue</option>
+                            <option>Last Payment Date</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+        
+        <!-- Accounts Receivable -->
+        <div class="container report-header">
+            <h4>Accounts Receivable</h4>
+            <form>
+                <div class="form-row">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputARType1" placeholder="For Client...">
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputARType2" placeholder="For Case...">
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formARControlSelect3">
+                            <option>For Attorney...</option>
+                            <option>Brian Brain</option>
+                            <option>Charles Chan</option>
+                            <option>Aldous Huxley</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formARControlSelect4">
+                            <option>Group by Invoice</option>
+                            <option>Case</option>
+                            <option>Client</option>
+                            <option>Practice Area</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <hr/>
+       </div>
+       
+        
+        <!-- User Time & Expenses -->
+        <div class="container report-header">
+            <h4>User Time &amp; Expenses</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <select class="custom-select" id="formUTEControlSelect1">
+                            <option>For User Brian Brain</option>
+                            <option>Charles Chan</option>
+                            <option>Aldous Huxley</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Date Range...</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Today</a>
+							<a class="dropdown-item" href="#">This Week</a>
+							<a class="dropdown-item" href="#">Last Week</a>
+							<a class="dropdown-item" href="#">This Month</a>
+							<a class="dropdown-item" href="#">Last Month</a>
+							<a class="dropdown-item" href="#">This Year</a>
+							<a class="dropdown-item" href="#">Last Year</a>
+							<div class="dropdown-divider"></div>
+							<form>
+								<div class="form-group mx-4">
+									<label for="formUTEStartDate">Start Date</label>
+									<input class="form-control" id="formUTEStartDate" placeholder="mm/dd/yyyy">
+								</div>
+								<div class="form-group mx-4">
+									<label for="formUTEEndDate">End Date</label>
+									<input class="form-control" id="formUTEEndDate" placeholder="mm/dd/yyyy">
+								</div>
+								<button type="submit" class="btn btn-sm btn-outline-secondary mx-4">Submit</button>
+							</form>
+						</div>
+                    </div>
+
+			        <div class="col-auto">
+			            <div class="custom-control custom-checkbox">
+			                <input class="custom-control-input" type="checkbox" id="formUTECheck">
+			                <label class="custom-control-label" for="formUTECheck">Show descriptions</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+        
+            
+        <!-- Firm Time & Expenses -->
+        <div class="container report-header">
+            <h4>Firm Time &amp; Expenses</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Date Range...</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Today</a>
+							<a class="dropdown-item" href="#">This Week</a>
+							<a class="dropdown-item" href="#">Last Week</a>
+							<a class="dropdown-item" href="#">This Month</a>
+							<a class="dropdown-item" href="#">Last Month</a>
+							<a class="dropdown-item" href="#">This Year</a>
+							<a class="dropdown-item" href="#">Last Year</a>
+							<div class="dropdown-divider"></div>
+							<form>
+								<div class="form-group mx-4">
+									<label for="formFTEStartDate">Start Date</label>
+									<input class="form-control" id="formStartDate" placeholder="mm/dd/yyyy">
+								</div>
+								<div class="form-group mx-4">
+									<label for="formFTEEndDate">End Date</label>
+									<input class="form-control" id="formEndDate" placeholder="mm/dd/yyyy">
+								</div>
+								<button type="submit" class="btn btn-sm btn-outline-secondary mx-4">Submit</button>
+							</form>
+						</div>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formFTEControlSelect2">
+                            <option>Show Details</option>
+                            <option>Summary</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formFTEControlSelect3">
+                            <option>Group by User</option>
+                            <option>Case</option>
+                        </select>
+                    </div>
+			        <div class="col-auto">
+			            <div class="custom-control custom-checkbox">
+			                <input class="custom-control-input" type="checkbox" id="formFTECheck">
+			                <label class="custom-control-label" for="formFTECheck">Show descriptions</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+            
+        <!-- Case Time & Expenses -->
+        <div class="container report-header">
+            <h4>Case Time &amp; Expenses</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputCTEType2" placeholder="For Case...">
+                    </div>
+                    <div class="col-auto">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Date Range... </button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Today</a>
+							<a class="dropdown-item" href="#">This Week</a>
+							<a class="dropdown-item" href="#">Last Week</a>
+							<a class="dropdown-item" href="#">This Month</a>
+							<a class="dropdown-item" href="#">Last Month</a>
+							<a class="dropdown-item" href="#">This Year</a>
+							<a class="dropdown-item" href="#">Last Year</a>
+							<div class="dropdown-divider"></div>
+							<form>
+								<div class="form-group mx-4">
+									<label for="formCTEStartDate">Start Date</label>
+									<input class="form-control" id="formCTEStartDate" placeholder="mm/dd/yyyy">
+								</div>
+								<div class="form-group mx-4">
+									<label for="formCTEEndDate">End Date</label>
+									<input class="form-control" id="formCTEEndDate" placeholder="mm/dd/yyyy">
+								</div>
+								<button type="submit" class="btn btn-sm btn-outline-secondary mx-4">Submit</button>
+							</form>
+						</div>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formCTEControlSelect1">
+                            <option>For User Brian Brain</option>
+                            <option>Charles Chan</option>
+                            <option>Aldous Huxley</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formCTEControlSelect4">
+                            <option>Group by User</option>
+                            <option>Case</option>
+                        </select>
+                    </div>
+			        <div class="col-auto">
+			            <div class="custom-control custom-checkbox">
+			                <input class="custom-control-input" type="checkbox" id="formCTECheck">
+			                <label class="custom-control-label" for="formCTECheck">Show descriptions</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+            
+        <!-- Trust Account Summary -->
+        <div class="container report-header">
+            <h4>Trust Account Summary</h4>
+            <form>
+                <div class="form-row align-items-center">
+	                <div class="col-auto">
+                        <select class="custom-select" id="formTASControlSelect1">
+                            <option>As of Today</option>
+                            <option>Last Week</option>
+                            <option>Last Month</option>
+                            <option>(Date Picker)</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formTASControlSelect2">
+                            <option>Sort by Last Name</option>
+                            <option>First Name</option>
+                        </select>
+                    </div>
+			        <div class="col-auto">
+			            <div class="custom-control custom-checkbox">
+			                <input class="custom-control-input" type="checkbox" id="formTASCheck">
+			                <label class="custom-control-label" for="formTASCheck">Show $0 balances</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+            
+        <!-- Trust Account Activity -->
+        <div class="container report-header">
+            <h4>Trust Account Activity</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Date Range...</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Today</a>
+							<a class="dropdown-item" href="#">This Week</a>
+							<a class="dropdown-item" href="#">Last Week</a>
+							<a class="dropdown-item" href="#">This Month</a>
+							<a class="dropdown-item" href="#">Last Month</a>
+							<a class="dropdown-item" href="#">This Year</a>
+							<a class="dropdown-item" href="#">Last Year</a>
+							<div class="dropdown-divider"></div>
+							<form>
+								<div class="form-group mx-4">
+									<label for="formTAAStartDate">Start Date</label>
+									<input class="form-control" id="formStartDate" placeholder="mm/dd/yyyy">
+								</div>
+								<div class="form-group mx-4">
+									<label for="formTAAEndDate">End Date</label>
+									<input class="form-control" id="formEndDate" placeholder="mm/dd/yyyy">
+								</div>
+								<button type="submit" class="btn btn-sm btn-outline-secondary mx-4">Submit</button>
+							</form>
+						</div>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputTAAType1" placeholder="For Client...">
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formTAAControlSelect1">
+                            <option>For User Brian Brain</option>
+                            <option>Charles Chan</option>
+                            <option>Aldous Huxley</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+			        <div class="col-auto">
+			            <div class="custom-control custom-checkbox">
+			                <input class="custom-control-input" type="checkbox" id="formTAACheck">
+			                <label class="custom-control-label" for="formTAACheck">Show $0 balances</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+            
+        <!-- Non-Trust Retainer & Credit Account Summary -->
+        <div class="container report-header">
+            <h4>Non-Trust Retainer &amp; Credit Account Summary</h4>
+            <form>
+                <div class="form-row align-items-center">
+	                <div class="col-auto">
+                        <select class="custom-select" id="formNTASControlSelect1">
+                            <option>As of Today</option>
+                            <option>Last Week</option>
+                            <option>Last Month</option>
+                            <option>(Date Picker)</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formNTASControlSelect2">
+                            <option>All Attorneys</option>
+                            <option>Brian Brain</option>
+                            <option>Charles Chan</option>
+                            <option>Aldous Huxley</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+			        <div class="col-auto">
+			            <div class="custom-control custom-checkbox">
+			                <input class="custom-control-input" type="checkbox" id="formNTASCheck">
+			                <label class="custom-control-label" for="formNTASCheck">Show $0 balances</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+            
+        <!-- Non-Trust Retainer & Credit Account Activity -->
+        <div class="container report-header">
+            <h4>Non-Trust Retainer &amp; Credit Account Activity</h4>
+            <form>
+                <div class="form-row align-items-center">
+	                <div class="col-auto">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Date Range...</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Today</a>
+							<a class="dropdown-item" href="#">This Week</a>
+							<a class="dropdown-item" href="#">Last Week</a>
+							<a class="dropdown-item" href="#">This Month</a>
+							<a class="dropdown-item" href="#">Last Month</a>
+							<a class="dropdown-item" href="#">This Year</a>
+							<a class="dropdown-item" href="#">Last Year</a>
+							<div class="dropdown-divider"></div>
+							<form>
+								<div class="form-group mx-4">
+									<label for="formNTAAStartDate">Start Date</label>
+									<input class="form-control" id="formStartDate" placeholder="mm/dd/yyyy">
+								</div>
+								<div class="form-group mx-4">
+									<label for="formNTAAEndDate">End Date</label>
+									<input class="form-control" id="formEndDate" placeholder="mm/dd/yyyy">
+								</div>
+								<button type="submit" class="btn btn-sm btn-outline-secondary mx-4">Submit</button>
+							</form>
+						</div>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputNTAAType2" placeholder="For Client...">
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formNTAAControlSelect3">
+                            <option>All Attorneys</option>
+                            <option>Brian Brain</option>
+                            <option>Charles Chan</option>
+                            <option>Aldous Huxley</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+			        <div class="col-auto">
+			            <div class="custom-control custom-checkbox">
+			                <input class="custom-control-input" type="checkbox" id="formNTAACheck">
+			                <label class="custom-control-label" for="formNTAACheck">Show $0 balances</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+            
+        <!-- Case List -->
+        <div class="container report-header">
+            <h4>Case List</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputCLType1" placeholder="For Client...">
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formCLControlSelect2">
+                            <option>All Practice Areas</option>
+                            <option>Bankruptcy</option>
+                            <option>Criminal</option>
+                            <option>Family</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formCLControlSelect3">
+                            <option>Open & Closed Cases</option>
+                            <option>Open Cases</option>
+                            <option>Closed Cases</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formCLControlSelect2">
+                            <option>All Firm Users</option>
+                            <option>Brian Brain</option>
+                            <option>Charles Chan</option>
+                            <option>Aldous Huxley</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formCLControlSelect5">
+                            <option>Group by Case Name</option>
+                            <option>User</option>
+                            <option>Client</option>
+                            <option>Fee Structure</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <hr/>
+		</div>
+
+
+            
+        <!-- Statute of Limitations -->
+        <div class="container report-header">
+            <h4>Statute of Limitations</h4>
+            <form>
+                <div class="form-row align-items-center">
+	                <div class="col-auto">
+                        <select class="custom-select" id="formSOLControlSelect1">
+                            <option>My Cases</option>
+                            <option>All Firm Cases</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formSOLControlSelect2">
+                            <option>SOL Unsatisfied</option>
+                            <option>SOL Satisfied</option>
+                            <option>All</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+            
+        <!-- MyCase Electronic Payments -->
+        <div class="container report-header">
+            <h4>MyCase Electronic Payments</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Date Range...</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Today</a>
+							<a class="dropdown-item" href="#">This Week</a>
+							<a class="dropdown-item" href="#">Last Week</a>
+							<a class="dropdown-item" href="#">This Month</a>
+							<a class="dropdown-item" href="#">Last Month</a>
+							<a class="dropdown-item" href="#">This Year</a>
+							<a class="dropdown-item" href="#">Last Year</a>
+							<div class="dropdown-divider"></div>
+							<form>
+								<div class="form-group mx-4">
+									<label for="formMEPStartDate">Start Date</label>
+									<input class="form-control" id="formMEPStartDate" placeholder="mm/dd/yyyy">
+								</div>
+								<div class="form-group mx-4">
+									<label for="formMEPEndDate">End Date</label>
+									<input class="form-control" id="formMEPEndDate" placeholder="mm/dd/yyyy">
+								</div>
+								<button type="submit" class="btn btn-sm btn-outline-secondary mx-4">Submit</button>
+							</form>
+						</div>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputMEPType2" placeholder="For Client...">
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputMEPType3" placeholder="For Case...">
+                    </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+
+
+            
+        <!-- MyCase Credit Card Fees -->
+        <div class="container report-header">
+            <h4>MyCase Credit Card Fees</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="inputMCCFType1" placeholder="For Client...">
+                    </div>
+                    <div class="col-auto">
+                        <select class="custom-select" id="formMCCFControlSelect2">
+                            <option>Show Details</option>
+                            <option>Summary</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+        
+      <!-- Non-custom Bootstrap -->
+        <div class="container report-header">
+            <h4>Non-Custom Bootstrap Form Elements</h4>
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-md-2">
+                        <label for="inputMCCFType1">For Client</label>
+                        <input type="text" class="form-control" id="inputMCCFType1" placeholder="Client name...">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="formMCCFControlSelect2">Show</label>
+                        <select class="form-control" id="formMCCFControlSelect2">
+                            <option>Details</option>
+                            <option>Summary</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+			            <div class="form-check">
+			                <input class="form-check-input" type="checkbox" id="formNTAACheck">
+			                <label class="form-check-label" for="formNTAACheck">Show $0 balances</label>
+			            </div>
+			        </div>
+                </div>
+            </form>
+            <hr/>
+        </div>
+        
+        <!-- Plain Jane HTML -->
+        <div class="container report-header">
+            <h4>Plain Jane HTML</h4>
+            <form>
+	            <div class="form-row">
+                    <div class="col-auto">
+						<select name="practicearea">
+							<option>All Users</option>
+							<option>Brian Brain</option>
+							<option>Charles Chan</option>
+							<option>Aldous Huxley</option>
+						</select>
+					</div>
+                    <div class="col-auto">
+						<select name="practicearea">
+							<option>All Practice Areas</option>
+							<option>Bankruptcy</option>
+							<option>Criminal</option>
+							<option>Estate</option>
+							<option>Family</option>
+							<option>Immigration</option>
+						</select>
+					</div>
+					<div class="col-auto">
+						<input type="checkbox" name="showBalances" value="Bike"> Show $0 balances<br>
+					</div>
+
+				</div>
+			</form>
+		</div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
